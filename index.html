@@ -12,6 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/output.css" />
 
     <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -28,29 +29,174 @@
   </head>
   <body>
     <main>
-      <div class="hero bg-hero-pattern bg-cover bg-no-repeat h-screen">
-        <nav class="nav flex justify-between items-center p-4">
-          <img src="./images/logo.svg" alt="logo" class="" />
-          <div class="menu hidden">
-            <a href="">About</a>
-            <a href="">Careers</a>
-            <a href="">Events</a>
-            <a href="">Products</a>
-            <a href="">Support</a>
-          </div>
-          <div class="humberger">
-            <img src="./images/icon-hamburger.svg" alt="" />
+      <div
+        class="hero bg-hero-pattern bg-cover bg-no-repeat h-screen p-4 flex flex-col justify-center items-center"
+      >
+        <nav class="nav absolute top-4 w-full p-6">
+          <div class="flex justify-between items-center">
+            <img src="./images/logo.svg" alt="logo" class="cursor-pointer" />
+            <div class="menu hidden">
+              <a href="">About</a>
+              <a href="">Careers</a>
+              <a href="">Events</a>
+              <a href="">Products</a>
+              <a href="">Support</a>
+            </div>
+            <a class="humberger cursor-pointer">
+              <img src="./images/icon-hamburger.svg" alt="" />
+            </a>
           </div>
         </nav>
+
+        <div
+          id="text-hero"
+          class="border-solid border-white border-2 w-full p-6"
+        >
+          <p class="text-white text-5xl font-light tracking-wider uppercase">
+            Immersive experiences that deliver
+          </p>
+        </div>
       </div>
     </main>
+    <!-- second Layers -->
+    <div class="interactive-vr h-screen p-4 mt-24">
+      <img
+        src="./images/mobile/image-interactive.jpg"
+        alt="image-interactive"
+      />
+      <h2 class="uppercase font-thin text-5xl px-10 text-center mt-3">
+        The leader in interactive VR
+      </h2>
+      <p class="mt-0 p-10 text-center text-slate-500 tracking-wide">
+        Founded in 2011, Loopstudios has been producing world-class virtual
+        reality projects for some of the best companies around the globe. Our
+        award-winning creations have transformed businesses through digital
+        experiences that bind to their brand.
+      </p>
+    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >
-      Coded by <a href="#">Your Name Here</a>
+    <!-- Third Layers -->
+    <div class="our-creation p-4 h-auto my-28">
+      <h2 class="uppercase font-thin text-5xl px-10 text-center">
+        Our creations
+      </h2>
+      <div class="img-creation flex flex-col gap-4 mt-8 relative">
+        <div
+          class="item bg-[url('/images/mobile/image-deep-earth.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-10 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            Deep earth
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-night-arcade.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-10 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            Night arcade
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-soccer-team.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-24 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            Soccer team VR
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-grid.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-10 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            The grid
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-from-above.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-28 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            From up above VR
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-pocket-borealis.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-10 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            Pocket borealis
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-curiosity.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-10 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            The curiosity
+          </h3>
+        </div>
+        <div
+          class="item bg-[url('/images/mobile/image-fisheye.jpg')] bg-cover w-full h-32"
+        >
+          <h3
+            class="text-white uppercase w-24 tracking-wider relative left-5 top-14 text-xl font-light"
+          >
+            Make it fisheye
+          </h3>
+        </div>
+        <div
+          class="see flex items-center justify-center border-solid border-green-400 border-2 w-24 h-14 absolute -translate-x-1/2 left-1/2 top-[105%] transform-translate-y-1/2"
+        >
+          <a href="" class="uppercase tracking-widest font-semibold">See all</a>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer h-auto mt-5">
+      <footer class="flex flex-col gap-4 justify-center items-center bg-black">
+        <img src="./images/logo.svg" alt="logo" class="mt-4" />
+        <div
+          class="footer-text text-white flex flex-col gap-4 justify-center items-center mt-6"
+        >
+          <a href="">About</a>
+          <a href="">Careers</a>
+          <a href="">Events</a>
+          <a href="">Products</a>
+          <a href="">Support</a>
+        </div>
+        <div class="social flex gap-6 mt-6">
+          <a href="">
+            <img src="./images/icon-facebook.svg" alt="facebook" />
+          </a>
+          <a href="">
+            <img src="./images/icon-twitter.svg" alt="twitter" />
+          </a>
+          <a href="">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+          </a>
+          <a href="">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+          </a>
+        </div>
+        <p class="text-white">© 2021 Loopstudios. All rights reserved.</p>
+        <!-- attribution -->
+        <div class="attribution text-white">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+          Coded by <a href="#">Agus Setiawan</a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
