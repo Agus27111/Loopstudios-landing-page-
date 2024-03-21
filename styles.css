@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   background-color: hsl(0, 0%, 98%);
 }
 .hero {
@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 2rem;
 }
 .hero nav {
   display: flex;
@@ -32,14 +33,15 @@ body {
 
 .hero .hero-text {
   border: solid 2px white;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 80%;
 }
 .hero-text p {
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 90%;
+  margin-right: 2rem;
 }
 .second-layer {
   display: flex;
@@ -47,8 +49,90 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  padding: 2rem;
 }
 .second-img img {
-  width: 90%;
+  width: 95%;
+  margin-bottom: 2rem;
+}
+.second-layer h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 90%;
+}
+.second-layer p {
+  line-height: 150%;
+}
+.third-layers {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third-head .btn-lg {
+  display: none;
+}
+.items {
+  text-align: center;
+  color: white;
+}
+.third-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.third-item picture img {
+  width: 80%;
+  z-index: -2;
+  margin-bottom: 2rem;
+}
+.third-item p {
+  text-align: center;
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: left;
+  margin-right: 200px;
+  left: 4.5rem;
+  text-transform: uppercase;
+}
+.btn-mobile {
+  padding: 0.2rem 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: aliceblue;
+}
+footer img {
+  margin-bottom: 1rem;
+}
+.social {
+  text-align: center;
+}
+.icons {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 987px) {
+  .hero {
+    background-image: url(images/desktop/image-hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
