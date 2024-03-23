@@ -27,16 +27,22 @@ body {
   left: 0;
   width: 100%;
 }
+
 .nav-item a {
   font-size: 25px;
 }
+.nav-item a:hover {
+  color: hsl(0, 0%, 98%);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
 
-.hero .hero-text {
+.herotext1 {
   border: solid 2px white;
   padding: 1rem;
   width: 80%;
 }
-.hero-text p {
+.herotext1 p {
   color: white;
   font-size: 3rem;
   font-weight: 400;
@@ -59,10 +65,13 @@ body {
 .second-layer h2 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  line-height: 90%;
+  line-height: 110%;
+  text-transform: uppercase;
 }
 .second-layer p {
   line-height: 150%;
+  text-align: justify;
+  color: hsl(0, 0%, 55%);
 }
 .third-layers {
   padding: 2rem;
@@ -98,12 +107,18 @@ body {
   text-align: left;
   margin-right: 200px;
   left: 4.5rem;
+  line-height: 80%;
   text-transform: uppercase;
 }
 .btn-mobile {
   padding: 0.2rem 1.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+.btn-mobile:hover {
+  font-size: large;
+  background-color: blanchedalmond;
+  transition: all 0.5s ease-in-out;
 }
 footer {
   background-color: black;
@@ -113,6 +128,7 @@ footer {
   justify-content: center;
   padding: 2rem;
   color: aliceblue;
+  cursor: pointer;
 }
 footer img {
   margin-bottom: 1rem;
@@ -134,5 +150,111 @@ footer img {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 5rem;
+    position: relative;
+  }
+  .hero nav {
+    padding: 2rem 5rem;
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 5rem;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  .herotext1 {
+    width: 50%;
+    text-align: left;
+    padding: 3rem 2rem;
+  }
+  .herotext1 p {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 4.5rem;
+  }
+  .herotext2 {
+    width: 50%;
+  }
+
+  .second-layer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+    position: relative;
+  }
+  .second-img {
+    width: 60%;
+  }
+  .text-second {
+    width: 40%;
+    position: absolute;
+    background-color: white;
+    padding: 5rem;
+    left: 40rem;
+    top: 15rem;
+  }
+  .third-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .third-head h2 {
+    text-transform: uppercase;
+  }
+  .third-head .btn-lg {
+    display: block;
+    padding: 0.2rem 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .btn-lg:hover {
+    font-size: large;
+    background-color: blanchedalmond;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn-mobile {
+    display: none;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .logo {
+    grid-area: logo;
+  }
+
+  .social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .icons {
+    grid-area: icons;
+  }
+
+  .attribution {
+    grid-area: attribution;
+  }
+
+  footer {
+    display: grid;
+    grid-template-areas:
+      "logo icons"
+      "social attribution";
+    grid-template-columns: auto auto;
+    grid-column: 200px;
   }
 }

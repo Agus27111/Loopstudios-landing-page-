@@ -27,6 +27,8 @@
     />
     <link rel="stylesheet" href="styles.css" />
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Frontend Mentor | Loopstudios landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -48,7 +50,7 @@
         <nav class="navbar navbar-expand-lg bg-transparent top-0">
           <div class="container-fluid">
             <picture>
-              <img src="images/logo.svg" />
+              <img src="images/logo.svg" style="cursor: pointer" />
             </picture>
 
             <button
@@ -106,13 +108,16 @@
           </div>
         </nav>
       </header>
-      <div class="hero-text text-md-center">
-        <p>Immersive experiences that deliver</p>
+      <div class="hero-text text-md-center text-lg-start" data-aos="fade-up">
+        <div class="herotext1">
+          <p>Immersive experiences that deliver</p>
+        </div>
+        <div class="herotext2"></div>
       </div>
     </div>
     <!-- Second Layers -->
     <div class="second-layer">
-      <picture class="second-img">
+      <picture class="second-img" data-aos="zoom-in">
         <source
           media="(max-width:986px)"
           srcset="images/mobile/image-interactive.jpg"
@@ -124,7 +129,7 @@
         <img src="images/mobile/image-interactive.jpg" />
       </picture>
 
-      <div class="text-second">
+      <div class="text-second" data-aos="fade-up">
         <h2>The leader in interactive VR</h2>
         <p>
           Founded in 2011, Loopstudios has been producing world-class virtual
@@ -136,12 +141,12 @@
     </div>
     <!-- Third Layer -->
     <div class="third-layers">
-      <div class="third-head">
+      <div class="third-head" data-aos="fade-up">
         <h2>Our creations</h2>
         <button class="btn-lg">See all</button>
       </div>
       <div class="items">
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -155,7 +160,7 @@
           </picture>
           <p>Deep earth</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -169,7 +174,7 @@
           </picture>
           <p>Night arcade</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -183,7 +188,7 @@
           </picture>
           <p>Soccer team VR</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -197,7 +202,7 @@
           </picture>
           <p>The grid</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -211,7 +216,7 @@
           </picture>
           <p>From up above VR</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -225,7 +230,7 @@
           </picture>
           <p>Pocket borealis</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -239,7 +244,7 @@
           </picture>
           <p>The curiosity</p>
         </div>
-        <div class="third-item">
+        <div class="third-item" data-aos="zoom-in-down">
           <picture>
             <source
               media="(max-width:986px)"
@@ -255,10 +260,10 @@
         </div>
       </div>
 
-      <button class="btn-mobile">See all</button>
+      <button class="btn-mobile" data-aos="fade-up">See all</button>
     </div>
     <!-- Footer -->
-    <footer>
+    <footer data-aos="flip-left">
       <div class="logo">
         <img src="images/logo.svg" alt="" />
       </div>
@@ -275,15 +280,16 @@
         <ion-icon name="logo-pinterest"></ion-icon>
         <ion-icon name="logo-instagram"></ion-icon>
       </div>
-      <p>© 2021 Loopstudios. All rights reserved.</p>
+      
+      <div class="attribution" style="color: white">
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Agus Setiawan</a>.
+      </div>
     </footer>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Agus Setiawan</a>.
-    </div>
     <!-- Ionicons -->
     <script
       type="module"
@@ -300,5 +306,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
