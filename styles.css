@@ -30,13 +30,26 @@ body {
 
 .nav-item a {
   font-size: 25px;
+  position: relative;
+}
+.nav-item a::after {
+  background-color: whitesmoke;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+.nav-item a:hover::after {
+  width: 20%;
 }
 .nav-item a:hover {
   color: hsl(0, 0%, 98%);
   font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
-
 .herotext1 {
   border: solid 2px white;
   padding: 1rem;
@@ -62,6 +75,7 @@ body {
   width: 95%;
   margin-bottom: 2rem;
 }
+
 .second-layer h2 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
@@ -86,6 +100,10 @@ body {
 .items {
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .third-item {
   display: flex;
@@ -93,11 +111,22 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+  width: 80%;
+}
+.third-item picture {
+  position: relative;
+  cursor: pointer;
+  background-size: cover;
+  overflow: hidden;
 }
 .third-item picture img {
-  width: 80%;
-  z-index: -2;
   margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+.third-item:hover picture img {
+  transform: scale(1);
 }
 .third-item p {
   text-align: center;
@@ -109,6 +138,11 @@ body {
   left: 4.5rem;
   line-height: 80%;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.third-item p:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .btn-mobile {
   padding: 0.2rem 1.4rem;
@@ -136,6 +170,10 @@ footer img {
 .social {
   text-align: center;
 }
+.social p:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
 .icons {
   font-size: 2rem;
   display: flex;
@@ -143,6 +181,10 @@ footer img {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+.icons ion-icon:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 987px) {
   .hero {
@@ -165,6 +207,9 @@ footer img {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+  }
+  .nav-item a:hover::after {
     width: 100%;
   }
   .herotext1 {
@@ -228,7 +273,9 @@ footer img {
   .items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
   }
+
   footer .logo {
     grid-area: logo;
   }
@@ -239,6 +286,7 @@ footer img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 300px;
   }
 
   .icons {
@@ -255,6 +303,6 @@ footer img {
       "logo icons"
       "social attribution";
     grid-template-columns: auto auto;
-    grid-column: 200px;
+    column-gap: calc(80% / 2);
   }
 }
